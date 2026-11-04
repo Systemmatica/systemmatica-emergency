@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<style>.elementor-invisible{visibility:visible!important;opacity:1!important}html,body{overflow-x:clip}table{max-width:100%}@media(max-width:767px){table{display:block;overflow-x:auto}}.sm-static-cta{display:flex;flex-direction:column;gap:14px;align-items:flex-start;padding:8px 0;font-family:inherit}.sm-static-cta p{margin:0;font-size:16px;line-height:1.5}.sm-static-cta a{display:inline-block;background:#3249CA;color:#fff!important;padding:14px 26px;border-radius:8px;font-weight:600;text-decoration:none}</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Ассистент для бизнеса — Онлайн-курс | Systemmatica</title>
+    <meta name="description" content="Онлайн-курс: создай своего AI-помощника для бизнеса без программирования. Telegram-бот, интеграция с CRM, автоматические брифинги.">
+    <link rel="canonical" href="https://systemmatica.com/ai-course/">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/wp-content/uploads/favicon-100x100.png" sizes="32x32">
+    <link rel="icon" href="/wp-content/uploads/favicon.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/wp-content/uploads/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI-Ассистент для бизнеса — Онлайн-курс Systemmatica">
+    <meta property="og:description" content="Создай AI-ассистента без программирования. Онлайн-курс Systemmatica.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://systemmatica.com/ai-course/">
+    <meta property="og:image" content="/">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Systemmatica">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI-Ассистент для бизнеса — Онлайн-курс Systemmatica">
+    <meta name="twitter:description" content="Создай AI-ассистента без программирования. Онлайн-курс Systemmatica.">
+    <meta name="twitter:image" content="/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css?v=18">
+    <style>
+        /* Task 2: Hero price */
+        .hero-price {
+            margin: 10px 0 0 0;
+            font-size: 14px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        /* Task 3: Video thumbnail — override iframe-based wrapper */
+        .video-wrapper:has(.video-thumb) {
+            padding-bottom: 0 !important;
+            height: auto !important;
+        }
+        .video-thumb {
+            position: relative;
+            cursor: pointer;
+            border-radius: 12px;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .video-thumb img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .video-play-icon {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.2s;
+        }
+        .video-thumb:hover .video-play-icon { opacity: 0.85; }
+
+        /* Task 4: Mid-page CTA */
+        .section-cta-mid {
+            padding: 32px 0;
+            background: #f8f9fa;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .cta-mid-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .cta-mid-price {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        /* Navigation: burger + CTA button */
+        .nav-burger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            z-index: 1001;
+        }
+        .nav-burger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #1A1A2E;
+            margin: 5px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        .nav-burger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .nav-burger.active span:nth-child(2) { opacity: 0; }
+        .nav-burger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .nav-cta {
+            background: #3249CA;
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover { background: #2438A8; color: #fff !important; }
+        @media (max-width: 768px) {
+            .nav-burger { display: block; }
+            .nav-menu {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #fff;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 24px;
+                z-index: 1000;
+                padding: 80px 20px 20px;
+            }
+            .nav-menu.open {
+                display: flex;
+            }
+            .nav-menu li { list-style: none; }
+            .nav-menu a {
+                font-size: 20px;
+                font-weight: 600;
+                color: #1A1A2E;
+            }
+            .nav-cta {
+                padding: 14px 32px;
+                font-size: 18px;
+            }
+        }
+
+        /* Videos grid */
+        .videos-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 24px;
+        }
+        .video-card h3 {
+            font-size: 17px;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+        .video-card .video-duration {
+            font-size: 13px;
+            color: #999;
+            margin: 0 0 8px 0;
+        }
+        .video-card .video-benefit {
+            font-size: 14px;
+            color: #5C5F62;
+            margin: 0;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Knowledge Base Section */
+        .section-kb {
+            /* background managed by auto-alternation */
+        }
+        .kb-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #5C5F62;
+            font-size: 17px;
+        }
+        .kb-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .kb-screenshot img {
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        .kb-features {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .kb-feature {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .kb-feature-icon {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            background: #E8EBFA;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3249CA;
+        }
+        .kb-feature strong {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+        .kb-feature p {
+            font-size: 14px;
+            color: #5C5F62;
+            margin: 0;
+        }
+
+        /* Community Section */
+        .section-community {
+            /* background managed by auto-alternation */
+        }
+        .community-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .community-text p {
+            font-size: 17px;
+            color: #5C5F62;
+            margin-bottom: 24px;
+        }
+        .community-quote {
+            background: #F8F9FC;
+            border-left: 4px solid #3249CA;
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 24px;
+        }
+        .community-quote p {
+            font-size: 16px;
+            font-style: italic;
+            color: #1A1A2E;
+            margin-bottom: 8px;
+        }
+        .community-quote cite {
+            font-size: 13px;
+            color: #999;
+            font-style: normal;
+        }
+        .community-stats {
+            display: flex;
+            gap: 32px;
+        }
+        .community-stat strong {
+            display: block;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+        .community-stat p {
+            font-size: 13px;
+            color: #999;
+            margin: 0;
+        }
+        .community-screenshots {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .community-screenshots img {
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            width: 50%;
+            max-height: 500px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        /* Fix: center price inside tier box */
+        .price-tier {
+            justify-content: center !important;
+        }
+        .price-tier .tier-price {
+            justify-content: center;
+        }
+
+        /* Three-column pricing grid */
+        .pricing-grid-3col {
+            grid-template-columns: repeat(3, 1fr) !important;
+            max-width: 1200px !important;
+            margin-left: auto;
+            margin-right: auto;
+            gap: 24px !important;
+        }
+
+        /* Turnkey pricing card */
+        .pricing-turnkey {
+            border-color: #FF6B35;
+            background: linear-gradient(180deg, #FFF8F5 0%, #FFFFFF 30%);
+        }
+        .pricing-badge-accent {
+            background: #FF6B35 !important;
+        }
+        .btn-accent {
+            background: #FF6B35;
+            color: #fff;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .btn-accent:hover {
+            background: #E55A2B;
+            color: #fff;
+        }
+        .price-prefix {
+            font-size: 20px;
+            font-weight: 500;
+            color: #999;
+        }
+
+        /* Responsive: KB, Community, 3-col pricing */
+        @media (max-width: 1024px) {
+            .kb-grid,
+            .community-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .kb-screenshot {
+                order: -1;
+            }
+            .pricing-grid-3col {
+                grid-template-columns: 1fr !important;
+                max-width: 420px !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .community-stats {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .community-screenshots {
+                flex-direction: column;
+            }
+            .community-screenshots img {
+                width: 100%;
+            }
+        }
+
+        /* Instructor links */
+        .instructor-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 12px;
+        }
+        .instructor-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #3249CA;
+            text-decoration: none;
+            border: 1.5px solid #3249CA;
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .instructor-links a:hover {
+            background: #3249CA;
+            color: #fff;
+        }
+
+        /* Installment hint under price */
+        .installment-hint {
+            font-size: 0.82rem;
+            color: #9ca3af;
+            margin: 4px 0 0 0;
+            text-align: center;
+        }
+
+        /* Guarantee inline under pricing */
+        .pricing-guarantee {
+            text-align: center;
+            color: #374151;
+            font-size: 15px;
+            margin: 32px auto 0;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        /* Referral section */
+        .referral-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 17px;
+            margin-bottom: 32px;
+        }
+        .referral-share {
+            background: #F0FDF4;
+            border: 1px solid #BBF7D0;
+            border-radius: 12px;
+            padding: 28px 32px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .referral-text-box {
+            background: #fff;
+            border: 1px solid #D1D5DB;
+            border-radius: 8px;
+            padding: 14px 16px;
+            font-size: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+            position: relative;
+            margin-bottom: 12px;
+        }
+        .referral-copy-btn {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .referral-copy-btn:hover { background: var(--primary-dark); }
+        .referral-copy-btn.copied {
+            background: var(--success);
+        }
+    </style>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(93286516, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/93286516" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+    <!-- Schema.org: Course -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "AI-Ассистент для бизнеса — Онлайн-курс",
+        "description": "Онлайн-курс: создай своего AI-помощника для бизнеса без программирования. Telegram-бот, интеграция с CRM, автоматические брифинги.",
+        "url": "https://systemmatica.com/ai-course/",
+        "provider": {
+            "@type": "Organization",
+            "name": "Systemmatica",
+            "url": "https://systemmatica.com",
+            "sameAs": ["https://t.me/petr_targonskiy"]
+        },
+        "instructor": {
+            "@type": "Person",
+            "name": "Пётр Таргонский",
+            "url": "https://petr-targonskiy.com/",
+            "jobTitle": "Основатель и главный методолог Systemmatica"
+        },
+        "inLanguage": "ru",
+        "courseMode": "online",
+        "isAccessibleForFree": false,
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Стандарт",
+                "price": "29000",
+                "priceCurrency": "RUB",
+                "url": "https://systemmatica.com/checkout/?add-to-cart=1185",
+                "availability": "https://schema.org/InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Стандарт+",
+                "price": "59000",
+                "priceCurrency": "RUB",
+                "url": "https://systemmatica.com/checkout/?add-to-cart=1186",
+                "availability": "https://schema.org/InStock"
+            }
+        ],
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "courseWorkload": "PT20H"
+        },
+        "image": "https://systemmatica.com/ai-course/images/og-image.png"
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Нужно ли уметь программировать?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Нет. Вы будете давать инструкции AI-ассистенту Claude на естественном языке. Он напишет код за вас. Это называется vibe coding — программирование через диалог."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Какая подписка Claude нужна?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Лучше всего Claude Max за $100/мес — безлимит на использование. Но для базовых задач хватит и Pro за $20/мес. Для оплаты нужна иностранная карта (например, казахстанская)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Смогу ли я дальше развивать бота?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Да. Вы получите понимание архитектуры и навык работы с Claude Code. Добавление новых функций — это диалог с AI. Хотите новую команду? Просто опишите её словами."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "А если у меня amoCRM, а не Bitrix24?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Принципы те же. Мы покажем архитектуру на примере Bitrix24, но вы сможете адаптировать под amoCRM. API похожи, а Claude поможет с адаптацией."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Чем это лучше n8n или Make?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Больше свободы и гибкости. Claude Code может комбинировать любые элементы, а не только готовые интеграции. И система постоянно улучшает сама себя — сохраняет уроки и переиспользует их."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "К каким сервисам можно подключиться?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "К любым, у которых есть API: CRM (Bitrix, amoCRM), Telegram, Notion, Google Calendar, TickTick, браузер (WordPress, соцсети). Claude сам разберётся с документацией."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Как проходят занятия?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Видеоуроки в записи — смотрите в своём темпе. К каждому уроку — конспект и шпаргалка в закрытой Notion-базе. Вопросы задаёте в Telegram-чате курса, Пётр отвечает лично. Тариф Стандарт+ включает персональную онлайн-консультацию."
+                }
+            }
+        ]
+    }
+    </script>
+<script>document.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG'){t.style.visibility='hidden'}},true);</script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <a href="/" class="nav-logo">Systemmatica</a>
+            <button class="nav-burger" id="nav-burger" aria-label="Меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#pain-points">Проблемы</a></li>
+                <li><a href="#program">Программа</a></li>
+                <li><a href="#cases">Кейсы</a></li>
+                <li><a href="#pricing">Стоимость</a></li>
+                <li><a href="#pricing" class="nav-cta">Купить курс</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">Онлайн-курс</div>
+                    <h1>AI&#8209;агент для&nbsp;бизнеса и&nbsp;жизни&nbsp;— первая автоматизация уже на&nbsp;первом уроке</h1>
+                    <ul class="hero-bullets">
+                        <li>С&nbsp;первого урока подключаете AI к&nbsp;Telegram и&nbsp;решаете реальные задачи</li>
+                        <li>Модуль за&nbsp;модулем: CRM, документы, отчёты, рекрутинг</li>
+                        <li>Собираете через диалог с&nbsp;Claude, без&nbsp;кода</li>
+                        <li>Только практика из&nbsp;70+ реальных автоматизаций</li>
+                    </ul>
+
+                    <div class="hero-info-wrapper">
+                        <a href="#pricing" class="btn btn-primary btn-large">Купить курс</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-dashboard.jpg" alt="Recruiting Dashboard — пример AI-автоматизации">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Pain Points Section -->
+        <section class="section section-pains" id="pain-points">
+            <div class="container">
+                <h2>Узнаёте себя?</h2>
+                <div class="pains-grid">
+                    <div class="pain-card">
+                        <div class="pain-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <h3>Каждый день хайп: «GPT&#8209;5 всех порвал»?</h3>
+                        <p>Тонете в&nbsp;информационном потоке: новые модели, новые инструменты, новые «революции»&nbsp;— а&nbsp;в&nbsp;бизнесе ничего не&nbsp;меняется</p>
+                    </div>
+                    <div class="pain-card">
+                        <div class="pain-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="9" y1="9" x2="15" y2="15"></line>
+                                <line x1="15" y1="9" x2="9" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h3>ChatGPT пробовали&nbsp;— не&nbsp;зашло?</h3>
+                        <p>Поигрались, но&nbsp;системно внедрить в&nbsp;бизнес не&nbsp;получилось. Непонятно как&nbsp;сделать чтобы работало именно у&nbsp;вас</p>
+                    </div>
+                    <div class="pain-card">
+                        <div class="pain-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Платите за&nbsp;подписку&nbsp;— а&nbsp;толку ноль?</h3>
+                        <p>$20/мес за&nbsp;Claude или ChatGPT, используете как&nbsp;Google-поиск. Знаете, что&nbsp;можно больше&nbsp;— но&nbsp;не&nbsp;понимаете как&nbsp;превратить чат в&nbsp;рабочий инструмент</p>
+                    </div>
+                    <div class="pain-card">
+                        <div class="pain-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <h3>Нанять разработчика&nbsp;— дорого и&nbsp;долго?</h3>
+                        <p>От&nbsp;200К/мес, простую задачу делают 2&nbsp;недели&nbsp;— а&nbsp;потом уходят и&nbsp;всё нужно объяснять заново</p>
+                    </div>
+                    <div class="pain-card">
+                        <div class="pain-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3>Непонятно с&nbsp;чего начать?</h3>
+                        <p>Инструментов сотни: n8n, Make, Zapier, Cursor, AutoGPT... Нет понимания что&nbsp;выбрать и&nbsp;как связать в&nbsp;единую систему</p>
+                    </div>
+                    <div class="pain-card">
+                        <div class="pain-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Смотрите туториалы — а&nbsp;результата нет?</h3>
+                        <p>Часы обучения, горы статей&nbsp;— а&nbsp;рабочей автоматизации под&nbsp;свой бизнес как&nbsp;не&nbsp;было, так и&nbsp;нет</p>
+                    </div>
+                    <div class="pain-card">
+                        <div class="pain-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Собирали сами&nbsp;— работает криво?</h3>
+                        <p>Что&#8209;то слепили по&nbsp;туториалу, вроде работает, но&nbsp;непонятно почему. При&nbsp;первой же нестандартной ситуации&nbsp;— ломается</p>
+                    </div>
+                    <div class="pain-card">
+                        <div class="pain-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                        </div>
+                        <h3>Конкуренты уже внедряют&nbsp;— а&nbsp;вы&nbsp;ещё нет?</h3>
+                        <p>Понимаете, что&nbsp;AI&nbsp;— это не&nbsp;хайп и&nbsp;надо действовать. Но&nbsp;каждый раз откладываете, потому что&nbsp;непонятно с&nbsp;какой стороны подойти</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Magnet CTA -->
+        <section class="section section-lead-magnet" id="lead-magnet">
+            <div class="container">
+                <div class="lead-magnet-card">
+                    <div class="lead-magnet-content">
+                        <div class="lead-magnet-badge">Бесплатно</div>
+                        <h2>Не знаешь, с чего начать?</h2>
+                        <p>Скачай чек-лист: <strong>какие автоматизации внедрить в первую очередь</strong>. От быстрых побед за 1 день до системных изменений.</p>
+                        <ul class="lead-magnet-benefits">
+                            <li>20 автоматизаций с приоритетами</li>
+                            <li>Подходит любому бизнесу</li>
+                            <li>PDF — сохрани и отмечай выполненное</li>
+                        </ul>
+                        <a href="https://t.me/petr_targonskiy_bot?start=checklist" class="lead-magnet-btn" id="lead-magnet-cta" target="_blank" rel="noopener">
+                            Получить чек-лист в Telegram
+                        </a>
+                        <span class="lead-magnet-hint">Откроется бот — пришлёт PDF за 10 секунд</span>
+                    </div>
+                    <div class="lead-magnet-visual">
+                        <div class="lead-magnet-mockup">
+                            <div class="mockup-header">7 автоматизаций</div>
+                            <div class="mockup-item"><span class="mockup-check"></span> Скрининг 300 откликов за ночь</div>
+                            <div class="mockup-item"><span class="mockup-check"></span> Разбор встречи за 43 секунды</div>
+                            <div class="mockup-item"><span class="mockup-check"></span> КП из цитат клиента — 15 мин</div>
+                            <div class="mockup-item"><span class="mockup-check"></span> Утренний брифинг в 7:00</div>
+                            <div class="mockup-item mockup-more">+ ещё 16 пунктов</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Videos Section -->
+        <section class="section section-video" id="free-videos">
+            <div class="container">
+                <h2>Посмотрите пару уроков в&nbsp;открытом доступе</h2>
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <div class="video-thumb" data-video="9w8bApUR7K8">
+                                <img src="https://img.youtube.com/vi/9w8bApUR7K8/maxresdefault.jpg" alt="Как правильно давать контекст ИИ">
+                                <div class="video-play-icon">
+                                    <svg width="56" height="56" viewBox="0 0 64 64" fill="none">
+                                        <circle cx="32" cy="32" r="32" fill="rgba(0,0,0,0.6)"/>
+                                        <polygon points="26,20 50,32 26,44" fill="white"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Почему 97% компаний не&nbsp;готовы к&nbsp;ИИ и&nbsp;как это исправить СЕЙЧАС</h3>
+                        <p class="video-duration">10 минут</p>
+                        <p class="video-benefit">Поймёте, почему компании проваливаются при&nbsp;внедрении ИИ&nbsp;— и&nbsp;какой контекст нужно давать нейронке, чтобы она работала на&nbsp;результат</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <div class="video-thumb" data-video="_18pgfrn5ek">
+                                <img src="https://img.youtube.com/vi/_18pgfrn5ek/maxresdefault.jpg" alt="Быстрая победа: подключаем первое API">
+                                <div class="video-play-icon">
+                                    <svg width="56" height="56" viewBox="0 0 64 64" fill="none">
+                                        <circle cx="32" cy="32" r="32" fill="rgba(0,0,0,0.6)"/>
+                                        <polygon points="26,20 50,32 26,44" fill="white"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>ИИ агент: фундамент + доступ в&nbsp;Telegram</h3>
+                        <p class="video-duration">19 минут</p>
+                        <p class="video-benefit">Базовая установка, код и&nbsp;подключение нейронки к&nbsp;вашему Telegram&nbsp;— для&nbsp;переписок и&nbsp;отправки сообщений</p>
+                    </div>
+                </div>
+                <div id="yt-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;" onclick="if(event.target===this){this.style.display='none';document.getElementById('yt-iframe').src='';}">
+                    <div style="position:relative;width:min(854px,90vw);aspect-ratio:16/9;">
+                        <iframe id="yt-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;"></iframe>
+                        <button onclick="document.getElementById('yt-modal').style.display='none';document.getElementById('yt-iframe').src=''" style="position:absolute;top:-36px;right:0;background:none;border:none;color:white;font-size:28px;cursor:pointer;line-height:1;">&times;</button>
+                    </div>
+                </div>
+                <script>
+                    document.querySelectorAll('.video-thumb[data-video]').forEach(function(el){
+                        el.addEventListener('click',function(){
+                            var vid = this.getAttribute('data-video');
+                            document.getElementById('yt-iframe').src='https://www.youtube.com/embed/'+vid+'?autoplay=1';
+                            document.getElementById('yt-modal').style.display='flex';
+                        });
+                    });
+                </script>
+                <p class="video-description">На&nbsp;курсе я&nbsp;не&nbsp;буду делиться «волшебными промптами». Вместо этого вы&nbsp;получите понимание того, как&nbsp;правильно собирать и&nbsp;структурировать контекст для&nbsp;ИИ-агента, чтобы он&nbsp;точно понимал ваши запросы.</p>
+            </div>
+        </section>
+
+        <!-- Instructor Section -->
+        <section class="section section-instructor">
+            <div class="container">
+                <h2>Автор курса&nbsp;— Пётр Таргонский</h2>
+                <div class="instructor-card">
+                    <div class="instructor-photo">
+                        <img src="images/petr-photo.png" alt="Пётр Таргонский" width="260" height="260">
+                    </div>
+                    <div class="instructor-info">
+                        <p class="instructor-title">Основатель Systemmatica · Автор книги «Объясняю один раз. Руководство по&nbsp;созданию и&nbsp;внедрению базы знаний» · Лидер клуба систематизации в&nbsp;Reforma</p>
+                        <p class="instructor-bio">Основатель и&nbsp;главный методолог компании Systemmatica. 50+ проектов в&nbsp;11 городах и&nbsp;странах.</p>
+                        <p class="instructor-highlight">Мой AI&#8209;агент Собака&#8209;Пинака транскрибирует встречи, делает на&nbsp;основании них КП&nbsp;/ договоры / счета; скринит отклики кандидатов; делает онбординг и&nbsp;офбординг сотрудников и&nbsp;много чего ещё. Без&nbsp;кода, через диалог с&nbsp;Claude. Каждый инструмент на&nbsp;курсе я&nbsp;сначала внедрил в&nbsp;свой бизнес.</p>
+                        <div class="instructor-links">
+                            <a href="https://t.me/petr_targonskiy" target="_blank" rel="noopener">Telegram</a>
+                            <a href="https://petr-targonskiy.com/" target="_blank" rel="noopener">Личный сайт</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="section section-solution">
+            <div class="container">
+                <h2>Что получите после курса</h2>
+                <div class="solution-grid solution-grid-4col">
+                    <div class="solution-card solution-card-large">
+                        <div class="solution-number">1</div>
+                        <div class="solution-content">
+                            <h3>Полностью настроенная рабочая среда</h3>
+                            <p>ZED&nbsp;IDE (как Cursor, только быстрее), Claude&nbsp;Code, голосовой ввод, MCP&#8209;серверы и&nbsp;базовые skills&nbsp;— всё&nbsp;готово к&nbsp;работе</p>
+                        </div>
+                    </div>
+                    <div class="solution-card solution-card-large">
+                        <div class="solution-number">2</div>
+                        <div class="solution-content">
+                            <h3>Базовый контекст про вас и&nbsp;бизнес</h3>
+                            <p>Ваши цели, концепция бизнеса, ключевые ссылки, команда, рабочие чаты и&nbsp;основные источники данных</p>
+                        </div>
+                    </div>
+                    <div class="solution-card solution-card-large">
+                        <div class="solution-number">3</div>
+                        <div class="solution-content">
+                            <h3>Работающие бизнес-процессы</h3>
+                            <p>Несколько автоматизаций, настроенных прямо на&nbsp;курсе под&nbsp;ваши задачи. Цель&nbsp;— минимум 3–5 готовых процессов</p>
+                        </div>
+                    </div>
+                    <div class="solution-card solution-card-large">
+                        <div class="solution-number">4</div>
+                        <div class="solution-content">
+                            <h3>Навык создания новых процессов</h3>
+                            <p>Отработанная схема, как самостоятельно строить любые автоматизации в&nbsp;будущем — без&nbsp;разработчиков</p>
+                        </div>
+                    </div>
+                    <div class="solution-card solution-card-large">
+                        <div class="solution-number">5</div>
+                        <div class="solution-content">
+                            <h3>Пожизненный доступ к&nbsp;базе знаний</h3>
+                            <p>Закрытая Notion&#8209;база с&nbsp;материалами курса, шпаргалками и&nbsp;конспектами к&nbsp;каждому уроку. Остаётся у&nbsp;вас навсегда</p>
+                        </div>
+                    </div>
+                    <div class="solution-card solution-card-large">
+                        <div class="solution-number">6</div>
+                        <div class="solution-content">
+                            <h3>Закрытый чат участников</h3>
+                            <p>Telegram&#8209;группа курса: анонсы новых уроков, обсуждения по&nbsp;темам и&nbsp;прямой доступ к&nbsp;Петру — вопросы, помощь с&nbsp;настройкой</p>
+                        </div>
+                    </div>
+                    <div class="solution-card solution-card-large">
+                        <div class="solution-number">7</div>
+                        <div class="solution-content">
+                            <h3>Шпаргалки и&nbsp;конспекты</h3>
+                            <p>К&nbsp;каждому видеоуроку&nbsp;— структурированный конспект, ключевые команды и&nbsp;горячие клавиши для&nbsp;быстрого старта</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Before/After Comparison (table layout) -->
+        <section class="section section-comparison">
+            <div class="container">
+                <h2>Пробуете разбираться самостоятельно vs пройти курс</h2>
+                <div class="comparison-table">
+                    <div class="comparison-header">
+                        <div class="comparison-th comparison-th-negative">Сам разбираюсь</div>
+                        <div class="comparison-th comparison-th-positive">После курса</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell comparison-negative">Информационный шум: каждый день новая «революция»&nbsp;— GPT&#8209;5, Gemini, Grok всех порвал. Тонете и&nbsp;ничего не&nbsp;внедряете</div>
+                        <div class="comparison-cell comparison-positive">Конкретные инструменты из&nbsp;реального бизнеса&nbsp;— без&nbsp;хайпа, только то, что&nbsp;реально работает</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell comparison-negative">Смотрите туториалы часами, но&nbsp;рабочей системы под&nbsp;свой бизнес нет</div>
+                        <div class="comparison-cell comparison-positive">Минимальный набор инструментов, максимальная глубина&nbsp;— сосредотачиваемся на&nbsp;практике</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell comparison-negative">Сделали что&#8209;то по&nbsp;видео&nbsp;— при&nbsp;первой нестандартной ситуации сломалось</div>
+                        <div class="comparison-cell comparison-positive">Рабочий AI&#8209;ассистент под&nbsp;ваш бизнес, собранный своими руками</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell comparison-negative">Непонятно что&nbsp;выбрать из&nbsp;сотен инструментов и&nbsp;как всё связать</div>
+                        <div class="comparison-cell comparison-positive">Понимаете архитектуру&nbsp;— любую новую автоматизацию строите самостоятельно</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell comparison-negative">Месяцами изучаете, а&nbsp;реальных автоматизаций в&nbsp;бизнесе по&#8209;прежнему нет</div>
+                        <div class="comparison-cell comparison-positive">Делаете сами, без&nbsp;кода&nbsp;— через диалог с&nbsp;Claude</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell comparison-negative">Нанять разработчика&nbsp;— от&nbsp;200К/мес, и&nbsp;то&nbsp;не&nbsp;факт что&nbsp;сделает</div>
+                        <div class="comparison-cell comparison-positive">Навык остаётся с&nbsp;вами&nbsp;— не&nbsp;зависите ни&nbsp;от&nbsp;разработчиков, ни&nbsp;от&nbsp;конкретного инструмента</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof (Собака-Пинака) removed — covered by storytelling + case cards -->
+
+        <!-- Storytelling Section: What Your AI Can Do -->
+        <section class="section section-stories">
+            <div class="container">
+                <h2>Как это выглядит на&nbsp;практике</h2>
+                <p class="stories-intro">Не&nbsp;абстрактно, а&nbsp;на&nbsp;реальных примерах из&nbsp;работающего бизнеса.</p>
+
+                <!-- КП -->
+                <div class="story-card">
+                    <div class="story-trigger">Представьте: вы&nbsp;просто поговорили с&nbsp;клиентом</div>
+                    <div class="story-body">
+                        <p>И&nbsp;дальше без&nbsp;каких&#8209;либо дополнительных объяснений ваша нейронка сама собирает <strong>коммерческое предложение</strong> в&nbsp;вашем стиле, с&nbsp;вашими кейсами. Адаптирует страницы и&nbsp;цены исходя из&nbsp;тематики клиента, подбирает правильные кейсы и&nbsp;условия&nbsp;— те, которые вы&nbsp;обговорили на&nbsp;встрече, или&nbsp;те, которые нужно выдать исходя из&nbsp;того, что&nbsp;клиент хочет.</p>
+                        <div class="story-outcome">На&nbsp;выходе&nbsp;— готовый PDF, который тут&nbsp;же можно отправлять клиенту</div>
+                    </div>
+                </div>
+
+                <!-- Client Onboarding -->
+                <div class="story-card">
+                    <div class="story-trigger">Клиента всё&nbsp;устроило и&nbsp;он&nbsp;готов стартовать?</div>
+                    <div class="story-body">
+                        <p><strong>Ни&nbsp;слова больше.</strong> Система автоматически:</p>
+                        <ul class="story-details">
+                            <li>Соберёт контекст из&nbsp;переписок, CRM и&nbsp;записей встреч</li>
+                            <li>Создаст проект в&nbsp;Notion и&nbsp;папки для&nbsp;документов</li>
+                            <li>Создаст рабочую Telegram&#8209;группу с&nbsp;аватаром, правами и&nbsp;всеми участниками</li>
+                            <li>Уведомит команду и&nbsp;назначит ответственного аналитика</li>
+                            <li>Отправит приветствие клиенту и&nbsp;запросит реквизиты</li>
+                            <li>Подготовит договор и&nbsp;счёт параллельно</li>
+                        </ul>
+                        <p>Просто исходя из&nbsp;контекста, который вы&nbsp;уже собрали по&nbsp;встречам, и&nbsp;ваших правил онбординга клиента.</p>
+                        <div class="story-outcome">15&nbsp;задач за&nbsp;3&nbsp;минуты&nbsp;— одной командой</div>
+                    </div>
+                </div>
+
+                <!-- HR Section -->
+                <h3 class="stories-subtitle">Кстати о&nbsp;команде</h3>
+
+                <!-- Screening -->
+                <div class="story-card">
+                    <div class="story-trigger">Нанимаете кого&#8209;то и&nbsp;прилетело много откликов?</div>
+                    <div class="story-body">
+                        <p>Не&nbsp;нужно больше тратить время на&nbsp;разбор. Нейронка сама разберёт все отклики на&nbsp;HeadHunter исходя из&nbsp;ваших требований к&nbsp;кандидатам:</p>
+                        <ul class="story-details">
+                            <li>Оценит AI&#8209;навыки, инструменты, клиентский опыт, стабильность</li>
+                            <li>Расставит рейтинги: топ&nbsp;/ стоит позвать&nbsp;/ спорно&nbsp;/ отказ</li>
+                            <li>Сформирует отчёт с&nbsp;шорт&#8209;листом и&nbsp;живыми комментариями по&nbsp;каждому</li>
+                        </ul>
+                        <div class="story-outcome">165&nbsp;откликов → детальный разбор за&nbsp;15&nbsp;минут</div>
+                    </div>
+                </div>
+
+                <!-- Interviews -->
+                <div class="story-card">
+                    <div class="story-trigger">Провели собеседования?</div>
+                    <div class="story-body">
+                        <p>Последующие собеседования можно учитывать, чтобы получить от&nbsp;нейронки <strong>обратную связь по&nbsp;кандидату</strong>&nbsp;— и&nbsp;для дополнительного обучения: вычленить новые критерии при&nbsp;скрининге следующих кандидатов. Система учится на&nbsp;каждом интервью и&nbsp;становится точнее.</p>
+                    </div>
+                </div>
+
+                <!-- Employee Onboarding -->
+                <div class="story-card">
+                    <div class="story-trigger">Выбрали счастливчика, кто&nbsp;будет у&nbsp;вас работать?</div>
+                    <div class="story-body">
+                        <p>Система автоматически внедрит его в&nbsp;команду:</p>
+                        <ul class="story-details">
+                            <li>Создаст карточку сотрудника в&nbsp;Notion и&nbsp;Bitrix24</li>
+                            <li>Создаст персональную Telegram&#8209;группу с&nbsp;куратором</li>
+                            <li>Откроет доступы к&nbsp;базам знаний и&nbsp;рабочим материалам</li>
+                            <li>Отправит пошаговые инструкции: что&nbsp;читать, в&nbsp;каком порядке, куда&nbsp;писать вопросы</li>
+                            <li>Создаст чеклист ручных шагов для&nbsp;куратора с&nbsp;дедлайнами</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Employee Offboarding -->
+                <div class="story-card">
+                    <div class="story-trigger">Что&#8209;то пошло не&nbsp;так и&nbsp;пришла пора расставаться?</div>
+                    <div class="story-body">
+                        <p>Это&nbsp;ещё отдельный геморрой&nbsp;— убрать из&nbsp;всех чатов, забрать доступы, уволить из&nbsp;всех систем и&nbsp;так&nbsp;далее. Хорошо, что&nbsp;это&nbsp;больше не&nbsp;нужно делать руками:</p>
+                        <ul class="story-details">
+                            <li>Найдёт сотрудника во&nbsp;всех системах: CRM, Notion, Telegram, Google&nbsp;Drive</li>
+                            <li>Соберёт все сущности: активные сделки, открытые задачи, группы</li>
+                            <li>Удалит из&nbsp;40+ Telegram&#8209;групп и&nbsp;подчистит сообщения о&nbsp;выходе</li>
+                            <li>Деактивирует аккаунты, обновит статусы, передаст дела</li>
+                            <li>Создаст задачу с&nbsp;оставшимися ручными шагами</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- And more -->
+                <h3 class="stories-subtitle">И&nbsp;много чего ещё</h3>
+
+                <div class="stories-more-grid">
+                    <div class="story-mini">
+                        <strong>Документы</strong>
+                        <p>Договоры, счета, акты&nbsp;— по&nbsp;шаблону, с&nbsp;реквизитами, в&nbsp;один клик</p>
+                    </div>
+                    <div class="story-mini">
+                        <strong>Аналитика сайта</strong>
+                        <p>Яндекс.Метрика → готовый отчёт с&nbsp;конкретными рекомендациями по&nbsp;доработке</p>
+                    </div>
+                    <div class="story-mini">
+                        <strong>Разбор заказов</strong>
+                        <p>AI читает документы в&nbsp;любом формате&nbsp;— PDF, Excel, фото&nbsp;— и&nbsp;находит позиции в&nbsp;каталоге</p>
+                    </div>
+                    <div class="story-mini">
+                        <strong>Поиск компонентов</strong>
+                        <p>Характеристики, изображения и&nbsp;классификация электронных компонентов по&nbsp;даташитам</p>
+                    </div>
+                    <div class="story-mini">
+                        <strong>Планирование производства</strong>
+                        <p>Загрузка станков, очерёдность операций, учёт переналадок</p>
+                    </div>
+                    <div class="story-mini">
+                        <strong>Клиентские отчёты</strong>
+                        <p>Еженедельный прогресс по&nbsp;проекту&nbsp;— автоматически, по&nbsp;расписанию</p>
+                    </div>
+                    <div class="story-mini">
+                        <strong>Расчёт зарплат</strong>
+                        <p>Формирование выплат по&nbsp;формулам, без&nbsp;ошибок и&nbsp;пересчётов вручную</p>
+                    </div>
+                    <div class="story-mini">
+                        <strong>Подбор туров</strong>
+                        <p>Описал словами отпуск мечты&nbsp;— получил топ&#8209;5 вариантов с&nbsp;обоснованием</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section class="section section-cases" id="cases">
+            <div class="container">
+                <h2>Что уже умеет наш AI&#8209;агент</h2>
+                <p class="cases-intro">Реальные задачи, которые решает Собака-Пинака каждый день</p>
+
+                <div class="cases-grid">
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/client-onboarding-checklist.png" alt="Онбординг клиента" loading="lazy">
+                        </div>
+                        <h3>Онбординг клиента</h3>
+                        <p>15&nbsp;задач за&nbsp;3&nbsp;минуты: CRM, Notion, Telegram&#8209;группа, договор, счёт</p>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/contract-invoice-generation.png" alt="Генерация договора и счёта" loading="lazy">
+                        </div>
+                        <h3>Договор и&nbsp;счёт</h3>
+                        <p>Генерация документов по&nbsp;шаблону с&nbsp;реквизитами клиента</p>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/employee-offboarding.png" alt="Увольнение сотрудника" loading="lazy">
+                        </div>
+                        <h3>Увольнение: 49&nbsp;групп</h3>
+                        <p>Забрать доступы, удалить из&nbsp;чатов, деактивировать аккаунты</p>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/crm-deal-from-chat.png" alt="Сделка из переписки" loading="lazy">
+                        </div>
+                        <h3>Сделка из&nbsp;переписки</h3>
+                        <p>Создание карточки в&nbsp;CRM прямо из&nbsp;контекста чата</p>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/commercial-proposal.png" alt="Коммерческое предложение" loading="lazy">
+                        </div>
+                        <h3>КП для&nbsp;франшизы</h3>
+                        <p>Коммерческое предложение с&nbsp;кейсами, адаптированное под&nbsp;клиента</p>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/crossposting-4-platforms.png" alt="Кросспостинг" loading="lazy">
+                        </div>
+                        <h3>Кросспостинг</h3>
+                        <p>Публикация в&nbsp;4&nbsp;соцсети одной командой</p>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/transcription-analysis.png" alt="Анализ встречи" loading="lazy">
+                        </div>
+                        <h3>Анализ встречи</h3>
+                        <p>Транскрипция + выводы + action items из&nbsp;записи звонка</p>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/site-setup-delegation.png" alt="Настройка сайта" loading="lazy">
+                        </div>
+                        <h3>Настройка сайта</h3>
+                        <p>Инструкция для&nbsp;команды по&nbsp;доработке с&nbsp;конкретными шагами</p>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/onboarding-full-report.png" alt="Отчёт по онбордингу" loading="lazy">
+                        </div>
+                        <h3>Полный отчёт</h3>
+                        <p>Детальный отчёт по&nbsp;выполненным задачам со&nbsp;статусами</p>
+                    </div>
+                </div>
+
+                <p style="text-align:center;margin-top:24px;color:var(--text-secondary);font-size:15px;">Всё это собрано без&nbsp;единой строчки кода. На&nbsp;курсе вы&nbsp;пройдёте тот&nbsp;же путь&nbsp;— от&nbsp;нуля до&nbsp;работающего ассистента.</p>
+            </div>
+        </section>
+
+        <!-- Program Section -->
+        <section class="section section-program" id="program">
+            <div class="container">
+                <h2>Программа курса</h2>
+
+                <div class="program-grid">
+                    <div class="program-item">
+                        <div class="program-icon">1</div>
+                        <div class="program-content">
+                            <strong>Вводные</strong>
+                            <p>Что получим на&nbsp;выходе, как это работает, обзор инструментов</p>
+                        </div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-icon">2</div>
+                        <div class="program-content">
+                            <strong>Установка и&nbsp;настройка</strong>
+                            <p>Claude Code, Cursor, MCP-серверы, Git, вспомогательные программы</p>
+                        </div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-icon">3</div>
+                        <div class="program-content">
+                            <strong>Фишки для ежедневной работы</strong>
+                            <p>Горячие клавиши, голосовой ввод, режим планирования</p>
+                        </div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-icon">4</div>
+                        <div class="program-content">
+                            <strong>Концепция проекта</strong>
+                            <p>Собираем проект с&nbsp;нуля через vibe&nbsp;coding — навык важнее готового слепка</p>
+                        </div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-icon">5</div>
+                        <div class="program-content">
+                            <strong>Фундаментальные скилы</strong>
+                            <p>Автоматический сбор инсайтов, сохранение лучших практик</p>
+                        </div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-icon">6</div>
+                        <div class="program-content">
+                            <strong>Интеграции</strong>
+                            <p>Telegram-бот, CRM, Notion, Google API — получаем доступы и&nbsp;связываем</p>
+                        </div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-icon">7</div>
+                        <div class="program-content">
+                            <strong>Безопасность</strong>
+                            <p>Хранение ключей, контроль доступа, разграничение прав</p>
+                        </div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-icon">8</div>
+                        <div class="program-content">
+                            <strong>Личный опыт и&nbsp;нюансы</strong>
+                            <p>Типичные ошибки ИИ и&nbsp;как их&nbsp;избежать</p>
+                        </div>
+                    </div>
+                    <div class="program-item program-item-highlight">
+                        <div class="program-icon">9</div>
+                        <div class="program-content">
+                            <strong>Реальные кейсы</strong>
+                            <p>Работаем над вашими задачами — цель минимум 3-5 работающих бизнес-процессов</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Knowledge Base Section -->
+        <section class="section section-kb">
+            <div class="container">
+                <h2>База знаний участников</h2>
+                <p class="kb-intro">Каждый участник получает доступ к&nbsp;закрытой Notion&#8209;базе с&nbsp;материалами курса, шпаргалками и&nbsp;нашим внутренним руководством по&nbsp;Claude&nbsp;Code</p>
+                <div class="kb-grid">
+                    <div class="kb-screenshot">
+                        <img src="images/notion-kb-course.png" alt="Notion база знаний курса" loading="lazy">
+                    </div>
+                    <div class="kb-features">
+                        <div class="kb-feature">
+                            <div class="kb-feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            </div>
+                            <div>
+                                <strong>6 уроков уже готово&nbsp;— остальные в&nbsp;работе</strong>
+                                <p>Записываем по&nbsp;программе курса. Участники влияют на&nbsp;порядок: голосуете за&nbsp;темы&nbsp;— записываем то, что&nbsp;нужно вам прямо сейчас. Ваши вопросы&nbsp;→ новые уроки</p>
+                            </div>
+                        </div>
+                        <div class="kb-feature">
+                            <div class="kb-feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                            </div>
+                            <div>
+                                <strong>Руководство по&nbsp;Claude&nbsp;Code</strong>
+                                <p>Внутренние материалы из&nbsp;нашей практики для&nbsp;бизнес-аналитиков</p>
+                            </div>
+                        </div>
+                        <div class="kb-feature">
+                            <div class="kb-feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                            </div>
+                            <div>
+                                <strong>Живая база&nbsp;— растёт вместе с&nbsp;вами</strong>
+                                <p>Новые уроки и&nbsp;материалы появляются регулярно, в&nbsp;том числе на&nbsp;основе вопросов участников</p>
+                            </div>
+                        </div>
+                        <div class="kb-feature">
+                            <div class="kb-feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            </div>
+                            <div>
+                                <strong>Доступ навсегда</strong>
+                                <p>База остаётся у&nbsp;вас после окончания курса</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Participants Chat Section -->
+        <section class="section section-community">
+            <div class="container">
+                <h2>Чат участников</h2>
+                <div class="community-content">
+                    <div class="community-text">
+                        <p>Каждый участник попадает в&nbsp;закрытую Telegram-группу курса. Это не&nbsp;«купил и&nbsp;забыли»&nbsp;— здесь всё происходит.</p>
+                        <div class="community-stats">
+                            <div class="community-stat">
+                                <strong>Анонсы и&nbsp;новые уроки</strong>
+                                <p>Уведомления о&nbsp;новых роликах и&nbsp;материалах приходят сразу</p>
+                            </div>
+                            <div class="community-stat">
+                                <strong>Топики по&nbsp;темам</strong>
+                                <p>Каждый урок&nbsp;— отдельная ветка обсуждения</p>
+                            </div>
+                            <div class="community-stat">
+                                <strong>Прямой доступ к&nbsp;Петру</strong>
+                                <p>Вопросы, обратная связь, помощь с&nbsp;настройкой&nbsp;— лично</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="community-screenshots">
+                        <img src="images/tg-chat-1.png" alt="Telegram-чат: уроки и видео с превью" loading="lazy">
+                        <img src="images/tg-chat-2.png" alt="Telegram-чат: топики и контент курса" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="section section-pricing" id="pricing">
+            <div class="container">
+                <h2>Стоимость участия</h2>
+
+                <div class="pricing-grid pricing-grid-3col" id="pricing-section">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Стандарт</h3>
+                        </div>
+                        <div class="pricing-tiers">
+                            <div class="price-tier active" data-tier="1">
+                                <div class="tier-price">
+                                    <span class="price-value">29 000</span>
+                                    <span class="price-currency">₽</span>
+                                </div>
+                            </div>
+                            <div class="installment-block">
+                                <span class="installment-label">Рассрочка от&nbsp;Т‑Банка, без процентов:</span>
+                                <ul class="installment-options">
+                                    <li>3&nbsp;месяца — <strong>9&nbsp;666&nbsp;₽</strong>/мес</li>
+                                    <li>4&nbsp;месяца — <strong>7&nbsp;250&nbsp;₽</strong>/мес</li>
+                                    <li>6&nbsp;месяцев — <strong>4&nbsp;833&nbsp;₽</strong>/мес</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Полный курс</li>
+                            <li>MVP проекта, собранный вашими руками</li>
+                            <li>Базовые skills для Claude</li>
+                            <li>Чат выпускников</li>
+                        </ul>
+                        <a href="https://t.me/PTargonskiy" class="btn btn-primary">Купить курс</a>
+                        <a href="#signup" class="signup-link" data-tariff="standard">Остались вопросы?</a>
+                    </div>
+
+                    <div class="pricing-card pricing-vip">
+                        <div class="pricing-badge">Топ</div>
+                        <div class="pricing-header">
+                            <h3>Стандарт+</h3>
+                        </div>
+                        <div class="pricing-tiers">
+                            <div class="price-tier active" data-tier="1">
+                                <div class="tier-price">
+                                    <span class="price-value">59 000</span>
+                                    <span class="price-currency">₽</span>
+                                </div>
+                            </div>
+                            <div class="installment-block">
+                                <span class="installment-label">Рассрочка от&nbsp;Т‑Банка, без процентов:</span>
+                                <ul class="installment-options">
+                                    <li>3&nbsp;месяца — <strong>19&nbsp;667&nbsp;₽</strong>/мес</li>
+                                    <li>4&nbsp;месяца — <strong>14&nbsp;750&nbsp;₽</strong>/мес</li>
+                                    <li>6&nbsp;месяцев — <strong>9&nbsp;833&nbsp;₽</strong>/мес</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Всё из&nbsp;Стандарт</li>
+                            <li class="feature-highlight">+1&nbsp;час онлайн-консультации после курса</li>
+                            <li class="feature-highlight">Онлайн-помощь с&nbsp;2&nbsp;процессами, которые не&nbsp;успели</li>
+                        </ul>
+                        <a href="https://t.me/PTargonskiy" class="btn btn-primary">Купить курс</a>
+                        <a href="#signup" class="signup-link" data-tariff="standard_plus">Остались вопросы?</a>
+                    </div>
+
+                    <div class="pricing-card pricing-turnkey">
+                        <div class="pricing-badge pricing-badge-accent">Premium</div>
+                        <div class="pricing-header">
+                            <h3>Под ключ</h3>
+                        </div>
+                        <div class="pricing-tiers">
+                            <div class="price-tier active" data-tier="1">
+                                <div class="tier-price">
+                                    <span class="price-prefix">от&nbsp;</span>
+                                    <span class="price-value">150 000</span>
+                                    <span class="price-currency">₽</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Мы&nbsp;приходим и&nbsp;делаем за&nbsp;вас</li>
+                            <li class="feature-highlight">Аудит ваших процессов</li>
+                            <li class="feature-highlight">Настройка AI-ассистента под&nbsp;ваш бизнес</li>
+                            <li class="feature-highlight">Интеграция с&nbsp;вашими системами</li>
+                            <li class="feature-highlight">Рабочая автоматизация + бонусная</li>
+                            <li>Обучение команды</li>
+                            <li>Сопровождение 1&nbsp;месяц</li>
+                        </ul>
+                        <a href="#signup" class="btn btn-accent signup-link" data-tariff="turnkey">Обсудить проект</a>
+                    </div>
+                </div>
+
+                <div class="installment-instruction">
+                    <h3>Как оплатить в&nbsp;рассрочку</h3>
+                    <ol class="installment-steps">
+                        <li>Нажмите <strong>«Купить курс»</strong> и&nbsp;заполните контактные данные на&nbsp;странице оформления заказа.</li>
+                        <li>На&nbsp;странице оплаты Т‑Банка прокрутите вниз до&nbsp;блока <strong>«Оплата в&nbsp;рассрочку»</strong>.</li>
+                        <li>Введите телефон, выберите срок — <strong>3, 4 или&nbsp;6&nbsp;месяцев</strong>. Решение Т‑Банка приходит за&nbsp;~2 минуты.</li>
+                        <li>Подпишите договор по&nbsp;СМС от&nbsp;Т‑Банка — мы&nbsp;открываем доступ к&nbsp;курсу в&nbsp;тот&nbsp;же день.</li>
+                    </ol>
+                    <p class="installment-note">Без процентов и&nbsp;переплат. Решение принимает Т‑Банк. По&nbsp;закону 283-ФЗ совокупный долг покупателя по&nbsp;всем активным рассрочкам не&nbsp;должен превышать 50&nbsp;000&nbsp;₽ — иначе возможен отказ.</p>
+                </div>
+
+                <!-- Sign-up Form -->
+                <div class="signup-section" id="signup">
+                    <div class="signup-form-card">
+                        <h3>Хочу на курс, но остались вопросы</h3>
+                        <p class="signup-subtitle">Оставьте контакт — мы свяжемся с вами в Telegram и всё расскажем</p>
+
+                        <div class="sm-static-cta"><p>Напишите нам в Telegram, ответим в течение дня.</p><a href="https://t.me/PTargonskiy" target="_blank" rel="noopener">Написать в Telegram</a></div>
+
+                        <div class="form-success" id="signup-success" hidden>
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <h3>Спасибо!</h3>
+                            <p>Мы свяжемся с вами в Telegram и ответим на все вопросы.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Referral moved to separate section below FAQ -->
+
+            </div>
+        </section>
+
+        <!-- Guarantee removed — moved inline under pricing -->
+
+        <!-- FAQ Section -->
+        <section class="section section-faq">
+            <div class="container">
+                <h2>Частые вопросы</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Нужно ли уметь программировать?</span>
+                            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Нет. Вы&nbsp;будете давать инструкции AI-ассистенту Claude на&nbsp;естественном языке. Он&nbsp;напишет код за&nbsp;вас. Это называется vibe&nbsp;coding — программирование через диалог.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Какая подписка Claude нужна?</span>
+                            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Лучше всего Claude Max за&nbsp;$100/мес — безлимит на&nbsp;использование. Но&nbsp;для базовых задач хватит и&nbsp;Pro за&nbsp;$20/мес. Для оплаты нужна иностранная карта (например, казахстанская).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Смогу ли я дальше развивать бота?</span>
+                            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Да. Вы&nbsp;получите понимание архитектуры и&nbsp;навык работы с&nbsp;Claude Code. Добавление новых функций — это&nbsp;диалог с&nbsp;AI. Хотите новую команду? Просто опишите её&nbsp;словами.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>А если у меня amoCRM, а не Bitrix24?</span>
+                            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Принципы те&nbsp;же. Мы&nbsp;покажем архитектуру на&nbsp;примере Bitrix24, но&nbsp;вы&nbsp;сможете адаптировать под amoCRM. API&nbsp;похожи, а&nbsp;Claude поможет с&nbsp;адаптацией.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Чем это лучше n8n или Make?</span>
+                            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Больше свободы и&nbsp;гибкости. Claude Code может комбинировать любые элементы, а&nbsp;не&nbsp;только готовые интеграции. И&nbsp;система постоянно улучшает сама себя — сохраняет уроки и&nbsp;переиспользует их.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>К каким сервисам можно подключиться?</span>
+                            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>К&nbsp;любым, у&nbsp;которых есть API: CRM (Bitrix, amoCRM), Telegram, Notion, Google Calendar, TickTick, браузер (WordPress, соцсети). Claude сам разберётся с&nbsp;документацией.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Как проходят занятия?</span>
+                            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Видеоуроки в&nbsp;записи&nbsp;— смотрите в&nbsp;своём темпе. К&nbsp;каждому уроку&nbsp;— конспект и&nbsp;шпаргалка в&nbsp;закрытой Notion-базе. Вопросы задаёте в&nbsp;Telegram-чате курса, Пётр отвечает лично. Тариф Стандарт+ включает персональную онлайн-консультацию.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Referral Section -->
+        <section class="section section-referral">
+            <div class="container">
+                <h2>Нравится концепция курса?</h2>
+                <p class="referral-subtitle">Расскажите про него двум самым близким, которым, считаете, это может быть полезно</p>
+                <div class="referral-share">
+                    <div class="referral-text-box" id="referral-text">Посмотри курс по ИИ-агентам от Петра Таргонского: /ai-course/ — тут есть два бесплатных урока, программа курса, кейсы из их практики и много чего ещё. Думаю, тебе это может быть актуально.</div>
+                    <button class="referral-copy-btn" id="referral-copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('referral-text').innerText).then(function(){var b=document.getElementById('referral-copy-btn');b.textContent='Скопировано ✓';b.classList.add('copied');setTimeout(function(){b.textContent='Скопировать текст';b.classList.remove('copied');},2000);})">Скопировать текст</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Purchase popup removed — payments handled by WooCommerce checkout -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="/" class="logo-link">
+                        <span class="logo-text">Systemmatica</span>
+                    </a>
+                    <p class="footer-tagline">Систематизация бизнеса</p>
+                </div>
+                <div class="footer-contact">
+                    <p>Пётр Таргонский</p>
+                    <p><a href="https://t.me/PTargonskiy">Telegram: @PTargonskiy</a></p>
+                    <p><a href="mailto:hello@systemmatica.com">hello@systemmatica.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Systemmatica. <a href="/privacy-policy/">Политика конфиденциальности</a> · <a href="/oferta/">Публичная оферта</a></p>
+                <p style="margin-top:8px;font-size:13px;color:#999;">ИП Таргонский П.В. · ИНН 246314644520 · ОГРНИП 318420500060857</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox">
+        <button class="lightbox-close" aria-label="Закрыть">&times;</button>
+        <img src="" alt="">
+    </div>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta" id="sticky-cta">
+        <a href="#pricing" class="btn btn-primary btn-full">Купить курс</a>
+    </div>
+
+    <script>
+        // Burger menu toggle
+        (function(){
+            var burger = document.getElementById('nav-burger');
+            var menu = document.getElementById('nav-menu');
+            if (!burger || !menu) return;
+            burger.addEventListener('click', function(){
+                burger.classList.toggle('active');
+                menu.classList.toggle('open');
+                burger.setAttribute('aria-expanded', menu.classList.contains('open'));
+            });
+            // Close menu on link click
+            menu.querySelectorAll('a').forEach(function(a){
+                a.addEventListener('click', function(){
+                    burger.classList.remove('active');
+                    menu.classList.remove('open');
+                    burger.setAttribute('aria-expanded', 'false');
+                });
+            });
+        })();
+    </script>
+    <script>
+        // Forward query params (UTM / coupon) from this landing onto the «Купить» checkout
+        // links, so a promo code in the URL (e.g. ?utm_campaign=OKROSHKA) survives to the
+        // checkout and auto-applies there (server-side mu-plugin systemmatica-auto-coupon).
+        (function(){
+            var qs = window.location.search;
+            if (!qs || qs.length < 2) return;
+            var incoming = new URLSearchParams(qs);
+            document.querySelectorAll('a[href*="add-to-cart="]').forEach(function(a){
+                try {
+                    var u = new URL(a.href, window.location.origin);
+                    incoming.forEach(function(val, key){
+                        if (!u.searchParams.has(key)) u.searchParams.set(key, val);
+                    });
+                    a.href = u.toString();
+                } catch (e) {}
+            });
+        })();
+    </script>
+    <script src="scripts/main.js?v=7"></script>
+</body>
+</html>

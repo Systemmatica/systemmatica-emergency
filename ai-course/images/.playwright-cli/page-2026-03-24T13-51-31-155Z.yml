@@ -1,0 +1,17 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]: Онлайн-курс
+    - heading "AI-агент для бизнеса и жизни — первая автоматизация уже на первом уроке" [level=1] [ref=e4]:
+      - text: AI-агент для бизнеса
+      - text: и жизни —
+      - generic [ref=e5]:
+        - text: первая
+        - text: автоматизация уже
+        - text: на первом уроке
+    - generic [ref=e6]: Создайте своего AI-ассистента без программирования. Через диалог с Claude.
+    - generic [ref=e8]: SYSTEMMATICA
+  - generic [ref=e11]:
+    - generic [ref=e12]: 💬 Telegram с первого урока
+    - generic [ref=e13]: 📋 CRM, документы, отчёты
+    - generic [ref=e14]: 🔧 70+ автоматизаций
+    - generic [ref=e15]: 🚀 Без кода, через диалог

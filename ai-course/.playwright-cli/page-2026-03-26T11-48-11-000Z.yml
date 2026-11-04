@@ -1,0 +1,519 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Systemmatica" [ref=e4] [cursor=pointer]:
+        - /url: https://systemmatica.com/
+      - button "Меню" [ref=e5] [cursor=pointer]
+  - banner [ref=e9]:
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - generic [ref=e13]: Онлайн-курс
+        - heading "AI‑агент для бизнеса и жизни — первая автоматизация уже на первом уроке" [level=1] [ref=e14]
+        - list [ref=e15]:
+          - listitem [ref=e16]: ✓ С первого урока подключаете AI к Telegram и решаете реальные задачи
+          - listitem [ref=e17]: "✓ Модуль за модулем: CRM, документы, отчёты, рекрутинг"
+          - listitem [ref=e18]: ✓ Собираете через диалог с Claude, без кода
+          - listitem [ref=e19]: ✓ Только практика из 70+ реальных автоматизаций
+        - link "Купить курс" [ref=e21] [cursor=pointer]:
+          - /url: "#pricing"
+      - img "Recruiting Dashboard — пример AI-автоматизации" [ref=e23]
+  - main [ref=e24]:
+    - generic [ref=e26]:
+      - heading "Узнаёте себя?" [level=2] [ref=e27]
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - img [ref=e31]
+          - 'heading "Каждый день хайп: «GPT‑5 всех порвал»?" [level=3] [ref=e33]'
+          - paragraph [ref=e34]: "Тонете в информационном потоке: новые модели, новые инструменты, новые «революции» — а в бизнесе ничего не меняется"
+        - generic [ref=e35]:
+          - img [ref=e37]
+          - heading "ChatGPT пробовали — не зашло?" [level=3] [ref=e41]
+          - paragraph [ref=e42]: Поигрались, но системно внедрить в бизнес не получилось. Непонятно как сделать чтобы работало именно у вас
+        - generic [ref=e43]:
+          - img [ref=e45]
+          - heading "Платите за подписку — а толку ноль?" [level=3] [ref=e48]
+          - paragraph [ref=e49]: $20/мес за Claude или ChatGPT, используете как Google-поиск. Знаете, что можно больше — но не понимаете как превратить чат в рабочий инструмент
+        - generic [ref=e50]:
+          - img [ref=e52]
+          - heading "Нанять разработчика — дорого и долго?" [level=3] [ref=e54]
+          - paragraph [ref=e55]: От 200К/мес, простую задачу делают 2 недели — а потом уходят и всё нужно объяснять заново
+        - generic [ref=e56]:
+          - img [ref=e58]
+          - heading "Непонятно с чего начать?" [level=3] [ref=e61]
+          - paragraph [ref=e62]: "Инструментов сотни: n8n, Make, Zapier, Cursor, AutoGPT... Нет понимания что выбрать и как связать в единую систему"
+        - generic [ref=e63]:
+          - img [ref=e65]
+          - heading "Смотрите туториалы — а результата нет?" [level=3] [ref=e70]
+          - paragraph [ref=e71]: Часы обучения, горы статей — а рабочей автоматизации под свой бизнес как не было, так и нет
+        - generic [ref=e72]:
+          - img [ref=e74]
+          - heading "Собирали сами — работает криво?" [level=3] [ref=e77]
+          - paragraph [ref=e78]: Что‑то слепили по туториалу, вроде работает, но непонятно почему. При первой же нестандартной ситуации — ломается
+        - generic [ref=e79]:
+          - img [ref=e81]
+          - heading "Конкуренты уже внедряют — а вы ещё нет?" [level=3] [ref=e84]
+          - paragraph [ref=e85]: Понимаете, что AI — это не хайп и надо действовать. Но каждый раз откладываете, потому что непонятно с какой стороны подойти
+    - generic [ref=e89]:
+      - generic [ref=e90]: Бесплатно
+      - heading "Не знаешь, с чего начать?" [level=2] [ref=e91]
+      - paragraph [ref=e92]:
+        - text: "Скачай чек-лист:"
+        - strong [ref=e93]: какие автоматизации внедрить в первую очередь
+        - text: . От быстрых побед за 1 день до системных изменений.
+      - list [ref=e94]:
+        - listitem [ref=e95]: ✓ 20 автоматизаций с приоритетами
+        - listitem [ref=e96]: ✓ Подходит любому бизнесу
+        - listitem [ref=e97]: ✓ PDF — сохрани и отмечай выполненное
+      - link "Получить чек-лист в Telegram" [ref=e98] [cursor=pointer]:
+        - /url: https://t.me/petr_targonskiy_bot?start=checklist
+      - generic [ref=e99]: Откроется бот — пришлёт PDF за 10 секунд
+    - generic [ref=e101]:
+      - heading "Посмотрите пару уроков в открытом доступе" [level=2] [ref=e102]
+      - generic [ref=e103]:
+        - generic [ref=e104]:
+          - generic [ref=e106] [cursor=pointer]:
+            - img "Как правильно давать контекст ИИ" [ref=e107]
+            - img [ref=e109]
+          - heading "Почему 97% компаний не готовы к ИИ и как это исправить СЕЙЧАС" [level=3] [ref=e112]
+          - paragraph [ref=e113]: 10 минут
+          - paragraph [ref=e114]: Поймёте, почему компании проваливаются при внедрении ИИ — и какой контекст нужно давать нейронке, чтобы она работала на результат
+        - generic [ref=e115]:
+          - generic [ref=e117] [cursor=pointer]:
+            - 'img "Быстрая победа: подключаем первое API" [ref=e118]'
+            - img [ref=e120]
+          - 'heading "ИИ агент: фундамент + доступ в Telegram" [level=3] [ref=e123]'
+          - paragraph [ref=e124]: 19 минут
+          - paragraph [ref=e125]: Базовая установка, код и подключение нейронки к вашему Telegram — для переписок и отправки сообщений
+      - paragraph [ref=e126]: На курсе я не буду делиться «волшебными промптами». Вместо этого вы получите понимание того, как правильно собирать и структурировать контекст для ИИ-агента, чтобы он точно понимал ваши запросы.
+    - generic [ref=e128]:
+      - heading "Автор курса — Пётр Таргонский" [level=2] [ref=e129]
+      - generic [ref=e130]:
+        - img "Пётр Таргонский" [ref=e132]
+        - generic [ref=e133]:
+          - paragraph [ref=e134]: Основатель Systemmatica · Автор книги «Объясняю один раз. Руководство по созданию и внедрению базы знаний» · Лидер клуба систематизации в Reforma
+          - paragraph [ref=e135]: Основатель и главный методолог компании Systemmatica. 50+ проектов в 11 городах и странах.
+          - paragraph [ref=e136]: Мой AI‑агент Собака‑Пинака транскрибирует встречи, делает на основании них КП / договоры / счета; скринит отклики кандидатов; делает онбординг и офбординг сотрудников и много чего ещё. Без кода, через диалог с Claude. Каждый инструмент на курсе я сначала внедрил в свой бизнес.
+          - generic [ref=e137]:
+            - link "Telegram" [ref=e138] [cursor=pointer]:
+              - /url: https://t.me/petr_targonskiy
+            - link "Личный сайт" [ref=e139] [cursor=pointer]:
+              - /url: https://petr-targonskiy.com/
+    - generic [ref=e141]:
+      - heading "Что получите после курса" [level=2] [ref=e142]
+      - generic [ref=e143]:
+        - generic [ref=e144]:
+          - generic [ref=e145]: "1"
+          - generic [ref=e146]:
+            - heading "Полностью настроенная рабочая среда" [level=3] [ref=e147]
+            - paragraph [ref=e148]: ZED IDE (как Cursor, только быстрее), Claude Code, голосовой ввод, MCP‑серверы и базовые skills — всё готово к работе
+        - generic [ref=e149]:
+          - generic [ref=e150]: "2"
+          - generic [ref=e151]:
+            - heading "Базовый контекст про вас и бизнес" [level=3] [ref=e152]
+            - paragraph [ref=e153]: Ваши цели, концепция бизнеса, ключевые ссылки, команда, рабочие чаты и основные источники данных
+        - generic [ref=e154]:
+          - generic [ref=e155]: "3"
+          - generic [ref=e156]:
+            - heading "Работающие бизнес-процессы" [level=3] [ref=e157]
+            - paragraph [ref=e158]: Несколько автоматизаций, настроенных прямо на курсе под ваши задачи. Цель — минимум 3–5 готовых процессов
+        - generic [ref=e159]:
+          - generic [ref=e160]: "4"
+          - generic [ref=e161]:
+            - heading "Навык создания новых процессов" [level=3] [ref=e162]
+            - paragraph [ref=e163]: Отработанная схема, как самостоятельно строить любые автоматизации в будущем — без разработчиков
+        - generic [ref=e164]:
+          - generic [ref=e165]: "5"
+          - generic [ref=e166]:
+            - heading "Пожизненный доступ к базе знаний" [level=3] [ref=e167]
+            - paragraph [ref=e168]: Закрытая Notion‑база с материалами курса, шпаргалками и конспектами к каждому уроку. Остаётся у вас навсегда
+        - generic [ref=e169]:
+          - generic [ref=e170]: "6"
+          - generic [ref=e171]:
+            - heading "Закрытый чат участников" [level=3] [ref=e172]
+            - paragraph [ref=e173]: "Telegram‑группа курса: анонсы новых уроков, обсуждения по темам и прямой доступ к Петру — вопросы, помощь с настройкой"
+        - generic [ref=e174]:
+          - generic [ref=e175]: "7"
+          - generic [ref=e176]:
+            - heading "Шпаргалки и конспекты" [level=3] [ref=e177]
+            - paragraph [ref=e178]: К каждому видеоуроку — структурированный конспект, ключевые команды и горячие клавиши для быстрого старта
+    - generic [ref=e180]:
+      - heading "Пробуете разбираться самостоятельно vs пройти курс" [level=2] [ref=e181]
+      - generic [ref=e182]:
+        - generic [ref=e183]:
+          - generic [ref=e184]: Сам разбираюсь
+          - generic [ref=e185]: После курса
+        - generic [ref=e186]:
+          - generic [ref=e187]: "Информационный шум: каждый день новая «революция» — GPT‑5, Gemini, Grok всех порвал. Тонете и ничего не внедряете"
+          - generic [ref=e188]: Конкретные инструменты из реального бизнеса — без хайпа, только то, что реально работает
+        - generic [ref=e189]:
+          - generic [ref=e190]: Смотрите туториалы часами, но рабочей системы под свой бизнес нет
+          - generic [ref=e191]: Минимальный набор инструментов, максимальная глубина — сосредотачиваемся на практике
+        - generic [ref=e192]:
+          - generic [ref=e193]: Сделали что‑то по видео — при первой нестандартной ситуации сломалось
+          - generic [ref=e194]: Рабочий AI‑ассистент под ваш бизнес, собранный своими руками
+        - generic [ref=e195]:
+          - generic [ref=e196]: Непонятно что выбрать из сотен инструментов и как всё связать
+          - generic [ref=e197]: Понимаете архитектуру — любую новую автоматизацию строите самостоятельно
+        - generic [ref=e198]:
+          - generic [ref=e199]: Месяцами изучаете, а реальных автоматизаций в бизнесе по‑прежнему нет
+          - generic [ref=e200]: Делаете сами, без кода — через диалог с Claude
+        - generic [ref=e201]:
+          - generic [ref=e202]: Нанять разработчика — от 200К/мес, и то не факт что сделает
+          - generic [ref=e203]: Навык остаётся с вами — не зависите ни от разработчиков, ни от конкретного инструмента
+    - generic [ref=e205]:
+      - heading "Как это выглядит на практике" [level=2] [ref=e206]
+      - paragraph [ref=e207]: Не абстрактно, а на реальных примерах из работающего бизнеса.
+      - generic [ref=e208]:
+        - generic [ref=e209]: "Представьте: вы просто поговорили с клиентом"
+        - generic [ref=e210]:
+          - paragraph [ref=e211]:
+            - text: И дальше без каких‑либо дополнительных объяснений ваша нейронка сама собирает
+            - strong [ref=e212]: коммерческое предложение
+            - text: в вашем стиле, с вашими кейсами. Адаптирует страницы и цены исходя из тематики клиента, подбирает правильные кейсы и условия — те, которые вы обговорили на встрече, или те, которые нужно выдать исходя из того, что клиент хочет.
+          - generic [ref=e213]: На выходе — готовый PDF, который тут же можно отправлять клиенту
+      - generic [ref=e214]:
+        - generic [ref=e215]: Клиента всё устроило и он готов стартовать?
+        - generic [ref=e216]:
+          - paragraph [ref=e217]:
+            - strong [ref=e218]: Ни слова больше.
+            - text: "Система автоматически:"
+          - list [ref=e219]:
+            - listitem [ref=e220]: Соберёт контекст из переписок, CRM и записей встреч
+            - listitem [ref=e221]: Создаст проект в Notion и папки для документов
+            - listitem [ref=e222]: Создаст рабочую Telegram‑группу с аватаром, правами и всеми участниками
+            - listitem [ref=e223]: Уведомит команду и назначит ответственного аналитика
+            - listitem [ref=e224]: Отправит приветствие клиенту и запросит реквизиты
+            - listitem [ref=e225]: Подготовит договор и счёт параллельно
+          - paragraph [ref=e226]: Просто исходя из контекста, который вы уже собрали по встречам, и ваших правил онбординга клиента.
+          - generic [ref=e227]: 15 задач за 3 минуты — одной командой
+      - heading "Кстати о команде" [level=3] [ref=e228]
+      - generic [ref=e229]:
+        - generic [ref=e230]: Нанимаете кого‑то и прилетело много откликов?
+        - generic [ref=e231]:
+          - paragraph [ref=e232]: "Не нужно больше тратить время на разбор. Нейронка сама разберёт все отклики на HeadHunter исходя из ваших требований к кандидатам:"
+          - list [ref=e233]:
+            - listitem [ref=e234]: Оценит AI‑навыки, инструменты, клиентский опыт, стабильность
+            - listitem [ref=e235]: "Расставит рейтинги: топ / стоит позвать / спорно / отказ"
+            - listitem [ref=e236]: Сформирует отчёт с шорт‑листом и живыми комментариями по каждому
+          - generic [ref=e237]: 165 откликов → детальный разбор за 15 минут
+      - generic [ref=e238]:
+        - generic [ref=e239]: Провели собеседования?
+        - paragraph [ref=e241]:
+          - text: Последующие собеседования можно учитывать, чтобы получить от нейронки
+          - strong [ref=e242]: обратную связь по кандидату
+          - text: "— и для дополнительного обучения: вычленить новые критерии при скрининге следующих кандидатов. Система учится на каждом интервью и становится точнее."
+      - generic [ref=e243]:
+        - generic [ref=e244]: Выбрали счастливчика, кто будет у вас работать?
+        - generic [ref=e245]:
+          - paragraph [ref=e246]: "Система автоматически внедрит его в команду:"
+          - list [ref=e247]:
+            - listitem [ref=e248]: Создаст карточку сотрудника в Notion и Bitrix24
+            - listitem [ref=e249]: Создаст персональную Telegram‑группу с куратором
+            - listitem [ref=e250]: Откроет доступы к базам знаний и рабочим материалам
+            - listitem [ref=e251]: "Отправит пошаговые инструкции: что читать, в каком порядке, куда писать вопросы"
+            - listitem [ref=e252]: Создаст чеклист ручных шагов для куратора с дедлайнами
+      - generic [ref=e253]:
+        - generic [ref=e254]: Что‑то пошло не так и пришла пора расставаться?
+        - generic [ref=e255]:
+          - paragraph [ref=e256]: "Это ещё отдельный геморрой — убрать из всех чатов, забрать доступы, уволить из всех систем и так далее. Хорошо, что это больше не нужно делать руками:"
+          - list [ref=e257]:
+            - listitem [ref=e258]: "Найдёт сотрудника во всех системах: CRM, Notion, Telegram, Google Drive"
+            - listitem [ref=e259]: "Соберёт все сущности: активные сделки, открытые задачи, группы"
+            - listitem [ref=e260]: Удалит из 40+ Telegram‑групп и подчистит сообщения о выходе
+            - listitem [ref=e261]: Деактивирует аккаунты, обновит статусы, передаст дела
+            - listitem [ref=e262]: Создаст задачу с оставшимися ручными шагами
+      - heading "И много чего ещё" [level=3] [ref=e263]
+      - generic [ref=e264]:
+        - generic [ref=e265]:
+          - strong [ref=e266]: Документы
+          - paragraph [ref=e267]: Договоры, счета, акты — по шаблону, с реквизитами, в один клик
+        - generic [ref=e268]:
+          - strong [ref=e269]: Аналитика сайта
+          - paragraph [ref=e270]: Яндекс.Метрика → готовый отчёт с конкретными рекомендациями по доработке
+        - generic [ref=e271]:
+          - strong [ref=e272]: Разбор заказов
+          - paragraph [ref=e273]: AI читает документы в любом формате — PDF, Excel, фото — и находит позиции в каталоге
+        - generic [ref=e274]:
+          - strong [ref=e275]: Поиск компонентов
+          - paragraph [ref=e276]: Характеристики, изображения и классификация электронных компонентов по даташитам
+        - generic [ref=e277]:
+          - strong [ref=e278]: Планирование производства
+          - paragraph [ref=e279]: Загрузка станков, очерёдность операций, учёт переналадок
+        - generic [ref=e280]:
+          - strong [ref=e281]: Клиентские отчёты
+          - paragraph [ref=e282]: Еженедельный прогресс по проекту — автоматически, по расписанию
+        - generic [ref=e283]:
+          - strong [ref=e284]: Расчёт зарплат
+          - paragraph [ref=e285]: Формирование выплат по формулам, без ошибок и пересчётов вручную
+        - generic [ref=e286]:
+          - strong [ref=e287]: Подбор туров
+          - paragraph [ref=e288]: Описал словами отпуск мечты — получил топ‑5 вариантов с обоснованием
+    - generic [ref=e290]:
+      - heading "Что уже умеет наш AI‑агент" [level=2] [ref=e291]
+      - paragraph [ref=e292]: Реальные задачи, которые решает Собака-Пинака каждый день
+      - generic [ref=e293]:
+        - generic [ref=e294]:
+          - img "Онбординг клиента" [ref=e296]
+          - heading "Онбординг клиента" [level=3] [ref=e297]
+          - paragraph [ref=e298]: "15 задач за 3 минуты: CRM, Notion, Telegram‑группа, договор, счёт"
+        - generic [ref=e299]:
+          - img "Генерация договора и счёта" [ref=e301]
+          - heading "Договор и счёт" [level=3] [ref=e302]
+          - paragraph [ref=e303]: Генерация документов по шаблону с реквизитами клиента
+        - generic [ref=e304]:
+          - img "Увольнение сотрудника" [ref=e306]
+          - 'heading "Увольнение: 49 групп" [level=3] [ref=e307]'
+          - paragraph [ref=e308]: Забрать доступы, удалить из чатов, деактивировать аккаунты
+        - generic [ref=e309]:
+          - img "Сделка из переписки" [ref=e311]
+          - heading "Сделка из переписки" [level=3] [ref=e312]
+          - paragraph [ref=e313]: Создание карточки в CRM прямо из контекста чата
+        - generic [ref=e314]:
+          - img "Коммерческое предложение" [ref=e316]
+          - heading "КП для франшизы" [level=3] [ref=e317]
+          - paragraph [ref=e318]: Коммерческое предложение с кейсами, адаптированное под клиента
+        - generic [ref=e319]:
+          - img "Кросспостинг" [ref=e321]
+          - heading "Кросспостинг" [level=3] [ref=e322]
+          - paragraph [ref=e323]: Публикация в 4 соцсети одной командой
+        - generic [ref=e324]:
+          - img "Анализ встречи" [ref=e326]
+          - heading "Анализ встречи" [level=3] [ref=e327]
+          - paragraph [ref=e328]: Транскрипция + выводы + action items из записи звонка
+        - generic [ref=e329]:
+          - img "Настройка сайта" [ref=e331]
+          - heading "Настройка сайта" [level=3] [ref=e332]
+          - paragraph [ref=e333]: Инструкция для команды по доработке с конкретными шагами
+        - generic [ref=e334]:
+          - img "Отчёт по онбордингу" [ref=e336]
+          - heading "Полный отчёт" [level=3] [ref=e337]
+          - paragraph [ref=e338]: Детальный отчёт по выполненным задачам со статусами
+      - paragraph [ref=e339]: Всё это собрано без единой строчки кода. На курсе вы пройдёте тот же путь — от нуля до работающего ассистента.
+    - generic [ref=e341]:
+      - heading "Программа курса" [level=2] [ref=e342]
+      - generic [ref=e343]:
+        - generic [ref=e344]:
+          - generic [ref=e345]: "1"
+          - generic [ref=e346]:
+            - strong [ref=e347]: Вводные
+            - paragraph [ref=e348]: Что получим на выходе, как это работает, обзор инструментов
+        - generic [ref=e349]:
+          - generic [ref=e350]: "2"
+          - generic [ref=e351]:
+            - strong [ref=e352]: Установка и настройка
+            - paragraph [ref=e353]: Claude Code, Cursor, MCP-серверы, Git, вспомогательные программы
+        - generic [ref=e354]:
+          - generic [ref=e355]: "3"
+          - generic [ref=e356]:
+            - strong [ref=e357]: Фишки для ежедневной работы
+            - paragraph [ref=e358]: Горячие клавиши, голосовой ввод, режим планирования
+        - generic [ref=e359]:
+          - generic [ref=e360]: "4"
+          - generic [ref=e361]:
+            - strong [ref=e362]: Концепция проекта
+            - paragraph [ref=e363]: Собираем проект с нуля через vibe coding — навык важнее готового слепка
+        - generic [ref=e364]:
+          - generic [ref=e365]: "5"
+          - generic [ref=e366]:
+            - strong [ref=e367]: Фундаментальные скилы
+            - paragraph [ref=e368]: Автоматический сбор инсайтов, сохранение лучших практик
+        - generic [ref=e369]:
+          - generic [ref=e370]: "6"
+          - generic [ref=e371]:
+            - strong [ref=e372]: Интеграции
+            - paragraph [ref=e373]: Telegram-бот, CRM, Notion, Google API — получаем доступы и связываем
+        - generic [ref=e374]:
+          - generic [ref=e375]: "7"
+          - generic [ref=e376]:
+            - strong [ref=e377]: Безопасность
+            - paragraph [ref=e378]: Хранение ключей, контроль доступа, разграничение прав
+        - generic [ref=e379]:
+          - generic [ref=e380]: "8"
+          - generic [ref=e381]:
+            - strong [ref=e382]: Личный опыт и нюансы
+            - paragraph [ref=e383]: Типичные ошибки ИИ и как их избежать
+        - generic [ref=e384]:
+          - generic [ref=e385]: "9"
+          - generic [ref=e386]:
+            - strong [ref=e387]: Реальные кейсы
+            - paragraph [ref=e388]: Работаем над вашими задачами — цель минимум 3-5 работающих бизнес-процессов
+    - generic [ref=e390]:
+      - heading "База знаний участников" [level=2] [ref=e391]
+      - paragraph [ref=e392]: Каждый участник получает доступ к закрытой Notion‑базе с материалами курса, шпаргалками и нашим внутренним руководством по Claude Code
+      - generic [ref=e393]:
+        - generic:
+          - img "Notion база знаний курса"
+        - generic [ref=e394]:
+          - generic [ref=e395]:
+            - img [ref=e397]
+            - generic [ref=e399]:
+              - strong [ref=e400]: 6 уроков уже готово — остальные в работе
+              - paragraph [ref=e401]: "Записываем по программе курса. Участники влияют на порядок: голосуете за темы — записываем то, что нужно вам прямо сейчас. Ваши вопросы → новые уроки"
+          - generic [ref=e402]:
+            - img [ref=e404]
+            - generic [ref=e407]:
+              - strong [ref=e408]: Руководство по Claude Code
+              - paragraph [ref=e409]: Внутренние материалы из нашей практики для бизнес-аналитиков
+          - generic [ref=e410]:
+            - img [ref=e412]
+            - generic [ref=e414]:
+              - strong [ref=e415]: Живая база — растёт вместе с вами
+              - paragraph [ref=e416]: Новые уроки и материалы появляются регулярно, в том числе на основе вопросов участников
+          - generic [ref=e417]:
+            - img [ref=e419]
+            - generic [ref=e422]:
+              - strong [ref=e423]: Доступ навсегда
+              - paragraph [ref=e424]: База остаётся у вас после окончания курса
+    - generic [ref=e426]:
+      - heading "Чат участников" [level=2] [ref=e427]
+      - generic [ref=e428]:
+        - generic [ref=e429]:
+          - paragraph [ref=e430]: Каждый участник попадает в закрытую Telegram-группу курса. Это не «купил и забыли» — здесь всё происходит.
+          - generic [ref=e431]:
+            - generic [ref=e432]:
+              - strong [ref=e433]: Анонсы и новые уроки
+              - paragraph [ref=e434]: Уведомления о новых роликах и материалах приходят сразу
+            - generic [ref=e435]:
+              - strong [ref=e436]: Топики по темам
+              - paragraph [ref=e437]: Каждый урок — отдельная ветка обсуждения
+            - generic [ref=e438]:
+              - strong [ref=e439]: Прямой доступ к Петру
+              - paragraph [ref=e440]: Вопросы, обратная связь, помощь с настройкой — лично
+        - generic [ref=e441]:
+          - 'img "Telegram-чат: уроки и видео с превью"'
+          - 'img "Telegram-чат: топики и контент курса"'
+    - generic [ref=e443]:
+      - heading "Стоимость участия" [level=2] [ref=e444]
+      - generic [ref=e445]:
+        - generic [ref=e446]:
+          - heading "Стандарт" [level=3] [ref=e448]
+          - generic [ref=e449]:
+            - generic [ref=e451]:
+              - generic [ref=e452]: 29 000
+              - generic [ref=e453]: ₽
+            - paragraph [ref=e454]: или ~9 700 ₽/мес × 3 мес
+          - list [ref=e455]:
+            - listitem [ref=e456]: Полный курс
+            - listitem [ref=e457]: MVP проекта, собранный вашими руками
+            - listitem [ref=e458]: Базовые skills для Claude
+            - listitem [ref=e459]: Чат выпускников
+          - link "Купить курс" [ref=e460] [cursor=pointer]:
+            - /url: https://systemmatica.com/checkout/?add-to-cart=1185
+          - link "Остались вопросы?" [ref=e461] [cursor=pointer]:
+            - /url: "#signup"
+        - generic [ref=e462]:
+          - generic [ref=e463]: Топ
+          - heading "Стандарт+" [level=3] [ref=e465]
+          - generic [ref=e466]:
+            - generic [ref=e468]:
+              - generic [ref=e469]: 59 000
+              - generic [ref=e470]: ₽
+            - paragraph [ref=e471]: или ~19 700 ₽/мес × 3 мес
+          - list [ref=e472]:
+            - listitem [ref=e473]: Всё из Стандарт
+            - listitem [ref=e474]: +1 час онлайн-консультации после курса
+            - listitem [ref=e475]: Онлайн-помощь с 2 процессами, которые не успели
+          - link "Купить курс" [ref=e476] [cursor=pointer]:
+            - /url: https://systemmatica.com/checkout/?add-to-cart=1186
+          - link "Остались вопросы?" [ref=e477] [cursor=pointer]:
+            - /url: "#signup"
+        - generic [ref=e478]:
+          - generic [ref=e479]: Premium
+          - heading "Под ключ" [level=3] [ref=e481]
+          - generic [ref=e484]:
+            - generic [ref=e485]: от
+            - generic [ref=e486]: 150 000
+            - generic [ref=e487]: ₽
+          - list [ref=e488]:
+            - listitem [ref=e489]: Мы приходим и делаем за вас
+            - listitem [ref=e490]: Аудит ваших процессов
+            - listitem [ref=e491]: Настройка AI-ассистента под ваш бизнес
+            - listitem [ref=e492]: Интеграция с вашими системами
+            - listitem [ref=e493]: Рабочая автоматизация + бонусная
+            - listitem [ref=e494]: Обучение команды
+            - listitem [ref=e495]: Сопровождение 1 месяц
+          - link "Обсудить проект" [ref=e496] [cursor=pointer]:
+            - /url: "#signup"
+      - generic [ref=e498]:
+        - heading "Хочу на курс, но остались вопросы" [level=3] [ref=e499]
+        - paragraph [ref=e500]: Оставьте контакт — мы свяжемся с вами в Telegram и всё расскажем
+        - generic [ref=e501]:
+          - generic [ref=e503]:
+            - generic [ref=e504]: Имя *
+            - textbox "Имя *" [ref=e505]:
+              - /placeholder: Как вас зовут
+          - generic [ref=e507]:
+            - generic [ref=e508]: Телефон *
+            - textbox "Телефон *" [ref=e509]:
+              - /placeholder: Привязанный к Telegram
+            - generic [ref=e510]: Мы напишем вам в Telegram по этому номеру
+          - generic [ref=e512]:
+            - generic [ref=e513]: Email (необязательно)
+            - textbox "Email (необязательно)" [ref=e514]:
+              - /placeholder: email@example.com
+          - button "Свяжитесь со мной" [ref=e515] [cursor=pointer]
+    - generic [ref=e517]:
+      - heading "Частые вопросы" [level=2] [ref=e518]
+      - generic [ref=e519]:
+        - generic [ref=e520]:
+          - button "Нужно ли уметь программировать?" [ref=e521] [cursor=pointer]:
+            - generic [ref=e522]: Нужно ли уметь программировать?
+            - img [ref=e523]
+          - paragraph [ref=e525]: Нет. Вы будете давать инструкции AI-ассистенту Claude на естественном языке. Он напишет код за вас. Это называется vibe coding — программирование через диалог.
+        - generic [ref=e526]:
+          - button "Какая подписка Claude нужна?" [ref=e527] [cursor=pointer]:
+            - generic [ref=e528]: Какая подписка Claude нужна?
+            - img [ref=e529]
+          - paragraph [ref=e531]: Лучше всего Claude Max за $100/мес — безлимит на использование. Но для базовых задач хватит и Pro за $20/мес. Для оплаты нужна иностранная карта (например, казахстанская).
+        - generic [ref=e532]:
+          - button "Смогу ли я дальше развивать бота?" [ref=e533] [cursor=pointer]:
+            - generic [ref=e534]: Смогу ли я дальше развивать бота?
+            - img [ref=e535]
+          - paragraph [ref=e537]: Да. Вы получите понимание архитектуры и навык работы с Claude Code. Добавление новых функций — это диалог с AI. Хотите новую команду? Просто опишите её словами.
+        - generic [ref=e538]:
+          - button "А если у меня amoCRM, а не Bitrix24?" [ref=e539] [cursor=pointer]:
+            - generic [ref=e540]: А если у меня amoCRM, а не Bitrix24?
+            - img [ref=e541]
+          - paragraph [ref=e543]: Принципы те же. Мы покажем архитектуру на примере Bitrix24, но вы сможете адаптировать под amoCRM. API похожи, а Claude поможет с адаптацией.
+        - generic [ref=e544]:
+          - button "Чем это лучше n8n или Make?" [ref=e545] [cursor=pointer]:
+            - generic [ref=e546]: Чем это лучше n8n или Make?
+            - img [ref=e547]
+          - paragraph [ref=e549]: Больше свободы и гибкости. Claude Code может комбинировать любые элементы, а не только готовые интеграции. И система постоянно улучшает сама себя — сохраняет уроки и переиспользует их.
+        - generic [ref=e550]:
+          - button "К каким сервисам можно подключиться?" [ref=e551] [cursor=pointer]:
+            - generic [ref=e552]: К каким сервисам можно подключиться?
+            - img [ref=e553]
+          - paragraph [ref=e555]: "К любым, у которых есть API: CRM (Bitrix, amoCRM), Telegram, Notion, Google Calendar, TickTick, браузер (WordPress, соцсети). Claude сам разберётся с документацией."
+        - generic [ref=e556]:
+          - button "Как проходят занятия?" [ref=e557] [cursor=pointer]:
+            - generic [ref=e558]: Как проходят занятия?
+            - img [ref=e559]
+          - paragraph [ref=e561]: Видеоуроки в записи — смотрите в своём темпе. К каждому уроку — конспект и шпаргалка в закрытой Notion-базе. Вопросы задаёте в Telegram-чате курса, Пётр отвечает лично. Тариф Стандарт+ включает персональную онлайн-консультацию.
+    - generic [ref=e563]:
+      - heading "Нравится концепция курса?" [level=2] [ref=e564]
+      - paragraph [ref=e565]: Расскажите про него двум самым близким, которым считаете это может быть полезно
+      - generic [ref=e566]:
+        - generic [ref=e567]: "Посмотри курс по ИИ-агентам от Петра Таргонского: https://systemmatica.com/ai-course/ — тут есть два бесплатных урока, программа курса, кейсы из их практики и много чего ещё. Думаю, тебе это может быть актуально."
+        - button "Скопировать текст" [ref=e568] [cursor=pointer]
+  - contentinfo [ref=e569]:
+    - generic [ref=e570]:
+      - generic [ref=e571]:
+        - generic [ref=e572]:
+          - link "Systemmatica" [ref=e573] [cursor=pointer]:
+            - /url: https://systemmatica.com/
+          - paragraph [ref=e574]: Систематизация бизнеса
+        - generic [ref=e575]:
+          - paragraph [ref=e576]: Пётр Таргонский
+          - paragraph [ref=e577]:
+            - 'link "Telegram: @PTargonskiy" [ref=e578] [cursor=pointer]':
+              - /url: https://t.me/PTargonskiy
+      - generic [ref=e579]:
+        - paragraph [ref=e580]:
+          - text: © 2026 Systemmatica.
+          - link "Политика конфиденциальности" [ref=e581] [cursor=pointer]:
+            - /url: https://systemmatica.com/privacy-policy/
+          - text: ·
+          - link "Публичная оферта" [ref=e582] [cursor=pointer]:
+            - /url: https://systemmatica.com/oferta/
+        - paragraph [ref=e583]: ИП Таргонский П.В. · ИНН 246314644520 · ОГРНИП 318420500060857

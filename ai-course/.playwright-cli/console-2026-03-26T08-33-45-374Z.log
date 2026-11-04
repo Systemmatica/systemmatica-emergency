@@ -1,0 +1,11 @@
+[    9293ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8082/images/tg-chat-1.png:0
+[    9293ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8082/images/tg-chat-2.png:0
+[   69497ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8082/images/cases/transcription-analysis.png:0
+[   69497ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8082/images/cases/site-setup-delegation.png:0
+[   69498ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8082/images/cases/onboarding-full-report.png:0
+[   69535ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8082/images/cases/commercial-proposal.png:0
+[   69535ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8082/images/cases/crm-deal-from-chat.png:0
+[   69535ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8082/images/cases/crossposting-4-platforms.png:0
+[   69576ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8082/images/cases/contract-invoice-generation.png:0
+[   69577ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8082/images/cases/client-onboarding-checklist.png:0
+[   69577ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8082/images/cases/employee-offboarding.png:0
